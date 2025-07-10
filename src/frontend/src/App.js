@@ -1,33 +1,18 @@
 
-import logo from './logo.svg';
+
+
 import './App.css';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import Chatbot from './Chatbot';
+import './Chatbot.css';
 
 function App() {
-  const [apiMessage, setApiMessage] = useState('');
-
-  useEffect(() => {
-    fetch('http://localhost:5000/api/hello')
-      .then((response) => response.json())
-      .then((data) => setApiMessage(data.message))
-      .catch((error) => setApiMessage('Erro ao conectar com a API.'));
-  }, []);
-
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Mensagem da API: {apiMessage}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div style={{ width: '100%', maxWidth: 600, margin: '32px auto 0 auto' }}>
+          <Chatbot />
+        </div>
       </header>
     </div>
   );

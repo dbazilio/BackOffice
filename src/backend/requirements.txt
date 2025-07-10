@@ -1,2 +1,3 @@
 # Dependências do projeto
 Flask
+flasgger
