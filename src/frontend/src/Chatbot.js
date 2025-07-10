@@ -20,7 +20,8 @@ function Chatbot() {
         body: JSON.stringify({ message: input })
       });
       if (res.ok) {
-        setMessages((msgs) => [...msgs, { text: 'Seja bem vindo ao ateliê Mayuli. Como posso ajuda-lo?', from: 'bot' }]);
+        const data = await res.json();
+        setMessages((msgs) => [...msgs, { text: data.response, from: 'bot' }]);
       } else {
         setMessages((msgs) => [...msgs, { text: 'Estamos trabalhando para melhor atendê-los', from: 'bot' }]);
       }

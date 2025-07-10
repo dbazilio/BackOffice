@@ -1,0 +1,16 @@
+{
+  "chats": [
+    {
+      "id": 1,
+      "user_message": "oi",
+      "bot_response": "Olá! Como posso ajudar você?",
+      "timestamp": "2025-07-10T01:03:44.736257Z"
+    },
+    {
+      "id": 2,
+      "user_message": "Olá",
+      "bot_response": "Você disse: Olá",
+      "timestamp": "2025-07-10T01:07:59.527159Z"
+    }
+  ]
+}
